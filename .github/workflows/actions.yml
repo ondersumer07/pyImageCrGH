@@ -2,7 +2,7 @@ name: run app.py
 
 on:
   schedule:
-    - cron: "*/10 * * * *" # every 10 minutes
+    - cron: "0 */2 * * *" # every 2 hours
 
 jobs:
   build:
@@ -29,7 +29,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "updated image" --allow-empty)
+          git diff-index --quiet HEAD || (git commit -a -m "updated image every 2 hours" --allow-empty)
 
       - name: push changes
         uses: ad-m/github-push-action@master
