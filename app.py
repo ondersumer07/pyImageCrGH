@@ -32,7 +32,7 @@ def createPoemImage():
     responsePoemNum = requests.get(poemNumApi)
     dataPoemNum = responsePoemNum.json()
     # dataPoemNum["randomNum"]
-    poemNum = 11
+    poemNum = dataPoemNum["randomNum"]
 
     # get POEM
     poemData =  data["items"][poemNum]["poem"]
