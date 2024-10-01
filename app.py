@@ -4,7 +4,7 @@ import requests
 import os
 
 # get data from pockethost
-api_url = "https://personal-website.pockethost.io/api/collections/poems/records?perPage=101"
+api_url = "https://personal-website.pockethost.io/api/collections/poems/records?perPage=250"
 response = requests.get(api_url)
 data = response.json()
 
